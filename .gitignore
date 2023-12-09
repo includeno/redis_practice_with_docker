@@ -1,6 +1,13 @@
 .idea
-*/*.idea
+*/.idea
+*/*/.idea/*
 */*/.idea
 *.pyc
 *.iml
 *.log
+*/target
+*.class
+*target
+*/*target
+*/*/*target
+*/*/*/*target
