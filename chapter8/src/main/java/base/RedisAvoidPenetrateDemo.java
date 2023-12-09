@@ -72,7 +72,20 @@ public class RedisAvoidPenetrateDemo {
                 e.printStackTrace();
             }
             finally{
-                //省略关闭ps和conn的代码
+                if (ps != null) {
+                    try {
+                        ps.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (conn != null) {
+                    try {
+                        conn.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
         return null;

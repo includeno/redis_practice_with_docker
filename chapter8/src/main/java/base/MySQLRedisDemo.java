@@ -107,7 +107,20 @@ public class MySQLRedisDemo {
                 e.printStackTrace();
             }
             finally{
-                //省略关闭ps和conn的代码
+                if (ps != null) {
+                    try {
+                        ps.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (conn != null) {
+                    try {
+                        conn.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
         return null;
